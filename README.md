@@ -10,7 +10,7 @@
 - [Видео прохождения тестов](#watermelon-Видео-прохождения-тестов)
 - [Отчет в Telegram](#bellhop_bell-Отчет-в-Telegram)
 
-## :watermelon: Технологии и инструменты
+## :alien: Технологии и инструменты
 
 <p align="center">
 <a href="https://www.jetbrains.com/idea/"><img src="src\test\resources\images\logo\Idea.svg" width="50" height="50"  alt="IDEA"/></a>
@@ -35,7 +35,7 @@
 - `Allure Report` формирует наглядный графический отчет о результатах  запуска тестов.
 - После завершения прогона тестов, специальный `Telegram Bot` отправляются в `Telegram` краткий вариант Allure Report
 
-## :watermelon: Реализованные проверки
+## :fairy: Реализованные проверки
 Примеры UI тестов:
 - [✓] Проверка отображения формы входа
 - [✓] Проверка отображения информации о копирайте
@@ -43,7 +43,7 @@
 - [✓] Переход к восстановлению пароля
 - [✓] Проверка аутентификации
 
-## :watermelon: Запуск тестов из терминала
+## :alien: Запуск тестов из терминала
 ###### Локальный запуск:
 ```
 gradle clean test
@@ -60,7 +60,7 @@ test
 -Dthreads=${THREADS}
 ```
 
-## :watermelon: Запуск тестов в Jenkins
+## :fairy: Запуск тестов в Jenkins
 Шаги:
 1. Зарегистрированным пользователем перейти на страницу сборки проекта по ссылке: <a target="_blank" href="https://jenkins.autotests.cloud/job/011-alexiaair-hw15-rb/">Jenkins Alexiaair</a>
 2. Перечисленные ниже параметры можно менять в графическом интерфейсе.
@@ -77,7 +77,7 @@ test
 - `ENVIRONMENT` - тестовый стенд (prod, demo, stage...), на котором запускались тесты. <i>Можно выставить значение из доступных в выпадающем списке</i>.
 - `COMMENT` - ваш текстовой комментарий
 
-## :bellhop_bell: Allure отчет
+## :alien: Allure отчет
 После того как тесты завершились, можно получить визуальный Allure отчет.
 <br>Способ 1: Сформировать отчет средствами IJ IDEA (Allure Serve)
 <br>Способ 2:
@@ -96,13 +96,13 @@ test
 <img title="Allure Graphics" src="src\test\resources\images\allure_tests.png">
 </p>
 
-## :watermelon: Видео прохождения тестов
+## :fairy: Видео прохождения тестов
 К каждому тесту (в отчете) прилагается автоматически сгенерирвонное Selenoid видео. Пример:
 <p align="center">
   <img title="Selenoid Video" src="src\test\resources\images\video_test.gif" alt="video">
 </p>
 
-## :bellhop_bell: Отчет в Telegram
+## :alien: Отчет в Telegram
 После завершения сборки специальный Telegram-бот отправляет сообщение с отчетом о прогоне тестов.
 Чтобы видеть сообщения от бота, вступите (временно) в телеграм-группу `TestNotification_alexiaair`
 
