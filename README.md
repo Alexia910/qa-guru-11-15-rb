@@ -22,7 +22,7 @@
 <a href="https://aerokube.com/selenoid/"><img src="src\test\resources\images\logo\Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>
 <a href="https://github.com/allure-framework/allure2"><img src="src\test\resources\images\logo\Allure.svg" width="50" height="50"  alt="Allure"/></a>
 <a href="https://www.jenkins.io/"><img src="src\test\resources\images\logo\Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
-<a href="https://web.telegram.org/"><img width="50" height="50"  alt="Telegram" src="D:\MAIN_FOLDER\git_repositories\qa-guru-11-15-rb\src\test\resources\images\logo\Telegram.svg"></a>
+<a href="https://web.telegram.org/"><img width="50" height="50"  alt="Telegram" src="src\test\resources\images\logo\Telegram.svg"></a>
 </p>
 
 Перечень технологий и инструментом, использованных при реализации этого проекта:
