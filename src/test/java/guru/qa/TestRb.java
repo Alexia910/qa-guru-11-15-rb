@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.stream.Stream;
 
@@ -21,7 +22,19 @@ public class TestRb {
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = "1920x1080";
-    }
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("version", "34");
+
+        //password and user for remote browser
+        String user = System.getProperty("user");
+        String password = System.getProperty("password");
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
+        Configuration.browserCapabilities = capabilities;
+        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = "https://" + user + ":" + password + "@" + System.getProperty("remoteBrowser");
 
     @BeforeEach
     void precondition() {
