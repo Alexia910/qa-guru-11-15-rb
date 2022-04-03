@@ -22,7 +22,7 @@ import static io.qameta.allure.Allure.step;
 public class TestRb {
     @BeforeAll
     static void beforeAll() {
-        Configuration.browserSize = "1920x1080";
+        Configuration.browserSize = System.getProperty("size", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("version", "91");
 
@@ -40,7 +40,7 @@ public class TestRb {
 
     @BeforeEach
     void precondition() {
-    open("https://online.rosbank.ru/ibank/home?0");
+    open("https://online.rosbank.ru/ibank/");
     }
 
     @AfterEach
