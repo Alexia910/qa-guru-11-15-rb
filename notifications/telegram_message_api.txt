@@ -1,0 +1,6 @@
+BOT_TOKEN 5170566482:AAEOCtT5qjPC0gA8rMFf5l5sqlE0haq8-H0
+CHAT_ID -1001782489296,
+curl -X POST \
+     -H 'Content-Type: application/json' \
+     -d '{"chat_id": "-1001782489296", "text": "This is a test from alexia"}' \
+     https://api.telegram.org/bot5170566482:AAEOCtT5qjPC0gA8rMFf5l5sqlE0haq8-H0/sendMessage
