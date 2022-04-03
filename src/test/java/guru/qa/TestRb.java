@@ -54,7 +54,7 @@ public class TestRb {
 
     @Test
     void displayingLoginForm() {
-        open("https://online.rosbank.ru/ibank/")
+        open("https://online.rosbank.ru/ibank/");
         step("Наличие названия формы", () -> {
             $$(".operationHeader").find(text("Вход")).shouldBe(visible);
         });
@@ -66,7 +66,7 @@ public class TestRb {
 
     @Test
     void displayingCopyrightInform() {
-        open("https://online.rosbank.ru/ibank/")
+        open("https://online.rosbank.ru/ibank/");
         step("Наличие информации о копирайте", () -> {
             $(".copyright").shouldHave(
                     text("2007 - 2020 ПАО РОСБАНК, Генеральная лицензия №2272 от 28.01.15")
@@ -76,7 +76,7 @@ public class TestRb {
 
     @Test
     void displayingPhoneNumber() {
-        open("https://online.rosbank.ru/ibank/")
+        open("https://online.rosbank.ru/ibank/");
         step("Наличие номера телефона", () -> {
             $(".phones").shouldHave(
                     text("8-800-200-54-34 доб. 2")
@@ -86,7 +86,7 @@ public class TestRb {
 
     @Test
     void openPassRecovery() {
-        open("https://online.rosbank.ru/ibank/")
+        open("https://online.rosbank.ru/ibank/");
         step("Нажатие на кнопку перехода к восстановлению пароля", () -> {
             $(".restorePasswordAction").click();
         });
@@ -107,7 +107,7 @@ public class TestRb {
     @MethodSource(value = "argumentsForSecondTest")
     @ParameterizedTest(name = "Проверка аутентификации")
     void authenticationLoginAndPassTest(String login, String pass) {
-        open("https://online.rosbank.ru/ibank/")
+        open("https://online.rosbank.ru/ibank/");
         step("Ввод значения в поле Логин", () -> {
             $(".loginField").setValue(login);
         });
