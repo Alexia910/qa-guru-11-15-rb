@@ -99,7 +99,7 @@ test
 ## :watermelon: Видео прохождения тестов
 К каждому тесту (в отчете) прилагается автоматически сгенерирвонное Selenoid видео. Пример:
 <p align="center">
-  <img title="Selenoid Video" src="D:\MAIN_FOLDER\git_repositories\qa-guru-11-15-rb\src\test\resources\images\video_test.gif" alt="video">
+  <img title="Selenoid Video" src="src\test\resources\images\video_test.gif" alt="video">
 </p>
 
 ## :bellhop_bell: Отчет в Telegram
@@ -107,5 +107,5 @@ test
 Чтобы видеть сообщения от бота, вступите (временно) в телеграм-группу `TestNotification_alexiaair`
 
 <p align="center">
-<img title="Telegram Bot" src="D:\MAIN_FOLDER\git_repositories\qa-guru-11-15-rb\src\test\resources\images\telegram.png">
+<img title="Telegram Bot" src="src\test\resources\images\telegram.png">
 </p>
