@@ -1,6 +1,7 @@
 package guru.qa;
 
 import com.codeborne.selenide.Configuration;
+import helpers.Attach;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -23,7 +24,7 @@ public class TestRb {
     static void beforeAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("version", "34");
+        Configuration.browserVersion = System.getProperty("version", "91");
 
         //password and user for remote browser
         String user = System.getProperty("user");
@@ -43,7 +44,11 @@ public class TestRb {
     }
 
     @AfterEach
-    void closedBrowser() {
+    void addAttachments() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
         closeWebDriver();
     }
 
