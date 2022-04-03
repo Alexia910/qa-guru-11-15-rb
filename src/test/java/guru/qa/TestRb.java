@@ -35,6 +35,7 @@ public class TestRb {
         Configuration.browserCapabilities = capabilities;
         //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         Configuration.remote = "https://" + user + ":" + password + "@" + System.getProperty("remoteBrowser");
+    }
 
     @BeforeEach
     void precondition() {
