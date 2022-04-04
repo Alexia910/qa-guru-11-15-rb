@@ -1,12 +1,10 @@
 package guru.qa;
 
-import com.codeborne.selenide.Configuration;
-import helpers.Attach;
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.stream.Stream;
 
@@ -80,7 +78,7 @@ public class TestRb {
         step("Ввод значения в поле Пароль", () -> {
             $(".passwordField").setValue(pass);
         });
-        step("Нажати на кнопку входа", () -> {
+        step("Нажатие на кнопку входа", () -> {
             $(".actionDefault").click();
         });
         step("Проверка наличия сообщения об ошибке", () -> {
