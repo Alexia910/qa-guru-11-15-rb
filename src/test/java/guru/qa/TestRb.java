@@ -2,10 +2,7 @@ package guru.qa;
 
 import com.codeborne.selenide.Configuration;
 import helpers.Attach;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -20,39 +17,9 @@ import static io.qameta.allure.Allure.step;
 
 
 public class TestRb {
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.browserSize = System.getProperty("size", "1920x1080");
-        Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("version", "91");
-
-        //password and user for remote browser
-        String user = System.getProperty("user");
-        String password = System.getProperty("password");
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
-        Configuration.browserCapabilities = capabilities;
-        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-        Configuration.remote = "https://" + user + ":" + password + "@" + System.getProperty("remoteBrowser");
-    }
-
-    @BeforeEach
-    void precondition() {
-    open("https://online.rosbank.ru/ibank/");
-    }
-
-    @AfterEach
-    void addAttachments() {
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
-        closeWebDriver();
-    }
 
     @Test
+    @DisplayName("Проверка отображения формы входа")
     void displayingLoginForm() {
         step("Наличие названия формы", () -> {
             $$(".operationHeader").find(text("Вход")).shouldBe(visible);
@@ -64,6 +31,7 @@ public class TestRb {
     }
 
     @Test
+    @DisplayName("Проверка отображения информации о копирайте")
     void displayingCopyrightInform() {
         step("Наличие информации о копирайте", () -> {
             $(".copyright").shouldHave(
@@ -73,6 +41,7 @@ public class TestRb {
     }
 
     @Test
+    @DisplayName("Проверка отображения номера телефона")
     void displayingPhoneNumber() {
         step("Наличие номера телефона", () -> {
             $(".phones").shouldHave(
@@ -82,6 +51,7 @@ public class TestRb {
     }
 
     @Test
+    @DisplayName("Переход к восстановлению пароля")
     void openPassRecovery() {
         step("Нажатие на кнопку перехода к восстановлению пароля", () -> {
             $(".restorePasswordAction").click();
@@ -102,6 +72,7 @@ public class TestRb {
 
     @MethodSource(value = "argumentsForSecondTest")
     @ParameterizedTest(name = "Проверка аутентификации")
+    @DisplayName("Проверка аутентификации")
     void authenticationLoginAndPassTest(String login, String pass) {
         step("Ввод значения в поле Логин", () -> {
             $(".loginField").setValue(login);

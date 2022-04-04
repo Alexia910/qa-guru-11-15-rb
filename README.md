@@ -13,16 +13,16 @@
 ## :alien: Технологии и инструменты
 
 <p align="center">
-<a href="https://www.jetbrains.com/idea/"><img src="src\test\resources\images\logo\Idea.svg" width="50" height="50"  alt="IDEA"/></a>
-<a href="https://www.java.com/"><img src="src\test\resources\images\logo\Java.svg" width="50" height="50"  alt="Java"/></a>
-<a href="https://github.com/"><img src="src\test\resources\images\logo\GitHub.svg" width="50" height="50"  alt="Github"/></a>
-<a href="https://junit.org/junit5/"><img src="src\test\resources\images\logo\Junit5.svg" width="50" height="50"  alt="JUnit 5"/></a>
-<a href="https://gradle.org/"><img src="src\test\resources\images\logo\Gradle.svg" width="50" height="50"  alt="Gradle"/></a>
-<a href="https://selenide.org/"><img src="src\test\resources\images\logo\Selenide.svg" width="50" height="50"  alt="Selenide"/></a>
-<a href="https://aerokube.com/selenoid/"><img src="src\test\resources\images\logo\Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>
-<a href="https://github.com/allure-framework/allure2"><img src="src\test\resources\images\logo\Allure.svg" width="50" height="50"  alt="Allure"/></a>
-<a href="https://www.jenkins.io/"><img src="src\test\resources\images\logo\Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
-<a href="https://web.telegram.org/"><img width="50" height="50"  alt="Telegram" src="src\test\resources\images\logo\Telegram.svg"></a>
+<a href="https://www.jetbrains.com/idea/"><img src="images\logo\Idea.svg" width="50" height="50"  alt="IDEA"/></a>
+<a href="https://www.java.com/"><img src="images\logo\Java.svg" width="50" height="50"  alt="Java"/></a>
+<a href="https://github.com/"><img src="images\logo\GitHub.svg" width="50" height="50"  alt="Github"/></a>
+<a href="https://junit.org/junit5/"><img src="images\logo\Junit5.svg" width="50" height="50"  alt="JUnit 5"/></a>
+<a href="https://gradle.org/"><img src="images\logo\Gradle.svg" width="50" height="50"  alt="Gradle"/></a>
+<a href="https://selenide.org/"><img src="images\logo\Selenide.svg" width="50" height="50"  alt="Selenide"/></a>
+<a href="https://aerokube.com/selenoid/"><img src="images\logo\Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>
+<a href="https://github.com/allure-framework/allure2"><img src="images\logo\Allure.svg" width="50" height="50"  alt="Allure"/></a>
+<a href="https://www.jenkins.io/"><img src="images\logo\Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
+<a href="https://web.telegram.org/"><img width="50" height="50"  alt="Telegram" src="images\logo\Telegram.svg"></a>
 </p>
 
 Перечень технологий и инструментом, использованных при реализации этого проекта:
@@ -52,12 +52,12 @@ gradle clean test
 ```
 clean
 test
+-Duser=${USER}
+-Dpassword=${PASSWORD}
+-DremoteBrowser=${REMOTE_BROWSER}
 -Dbrowser=${BROWSER}
--DbrowserVersion=${BROWSER_VERSION}
--DbrowserSize=${BROWSER_SIZE}
--DremoteDriverUrl=https://user1:1234@${REMOTE_BROWSER}/wd/hub/
--DvideoStorage=https://${REMOTE_BROWSER}/video/
--Dthreads=${THREADS}
+-Dsize=${BROUSERSIZE}
+-Dversion=${VERSION}
 ```
 
 ## :fairy: Запуск тестов в Jenkins
@@ -88,18 +88,18 @@ test
 
 ###### Главный экран отчета (Owerwiev)
 <p align="center">
-<img title="Allure Graphics" src="src\test\resources\images\allure_mian.png">
+<img title="Allure Graphics" src="images\allure_mian.png">
 </p>
 
 ###### Страница с проведенными тестами (Suites)
 <p align="center">
-<img title="Allure Graphics" src="src\test\resources\images\allure_tests.png">
+<img title="Allure Graphics" src="images\allure_tests.png">
 </p>
 
 ## :fairy: Видео прохождения тестов
 К каждому тесту (в отчете) прилагается автоматически сгенерирвонное Selenoid видео. Пример:
 <p align="center">
-  <img title="Selenoid Video" src="src\test\resources\images\video_test.gif" alt="video">
+  <img title="Selenoid Video" src="images\video_test.gif" alt="video">
 </p>
 
 ## :alien: Отчет в Telegram
@@ -107,5 +107,5 @@ test
 Чтобы видеть сообщения от бота, вступите (временно) в телеграм-группу `TestNotification_alexiaair`
 
 <p align="center">
-<img title="Telegram Bot" src="src\test\resources\images\telegram.png">
+<img title="Telegram Bot" src="images\telegram.png">
 </p>
