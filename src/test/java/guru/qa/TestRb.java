@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 
-public class TestRb {
+public class TestRb extends TestBase {
 
     @Test
     @DisplayName("Проверка отображения формы входа")
