@@ -69,7 +69,7 @@ public class TestRb extends TestBase {
     }
 
     @MethodSource(value = "argumentsForSecondTest")
-    @ParameterizedTest(name = "Проверка аутентификации")
+    @ParameterizedTest
     @DisplayName("Проверка аутентификации")
     void authenticationLoginAndPassTest(String login, String pass) {
         step("Ввод значения в поле Логин", () -> {
